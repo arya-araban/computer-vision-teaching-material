@@ -1,6 +1,6 @@
 clear
 
-in = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Barbara.bmp');
+in = imread('..\Images\1\Barbara.bmp');
 in = rgb2gray(in);
 
 % we convert to double so we can do math on the original image

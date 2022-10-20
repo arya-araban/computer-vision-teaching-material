@@ -1,7 +1,7 @@
 clear; 
 
 
-img = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine.bmp');
+img = imread('..\Images\1\Elaine.bmp');
 
 figure; imshow(img); title('Original Image')
 
@@ -12,4 +12,4 @@ figure;
 imshow(sampled_image);
 title('Image After Sampling')
 
-imwrite(sampled_image, 'C:\Users\Arya\Desktop\CV_code\Images\1\Elaine_Downsampled.bmp');
+imwrite(sampled_image, '..\Images\1\Elaine_Downsampled.bmp');

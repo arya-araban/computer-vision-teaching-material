@@ -1,6 +1,6 @@
 clear;
-im1 = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Goldhill.bmp');
-im2 = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine.bmp');
+im1 = imread('..\Images\1\Goldhill.bmp');
+im2 = imread('..\Images\1\Elaine.bmp');
 
 figure(1);
 subplot(2,3,1),imshow(im1); title ('IMAGE1');

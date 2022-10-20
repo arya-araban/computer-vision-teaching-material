@@ -1,9 +1,9 @@
 % nearest neighbour inpainting 
 clear; 
 
-og_image = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine.bmp');
+og_image = imread('..\Images\1\Elaine.bmp');
 
-in= imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine_Downsampled.bmp');
+in= imread('..\Images\1\Elaine_Downsampled.bmp');
 
 in_row_size = size(in,1);
 in_col_size = size(in,2);

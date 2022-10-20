@@ -1,5 +1,5 @@
 function b = pointProcessing(ops)
-    a = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Barbara.bmp');
+    a = imread('..\Images\1\Barbara.bmp');
     b = a;
     
     for op = 1:length(ops) 

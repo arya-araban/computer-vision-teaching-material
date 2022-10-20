@@ -1,9 +1,9 @@
 % nearest neighbour inpainting 
 clear; 
 
-in= imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine_Downsampled.bmp');
+in= imread('..\Images\1\Elaine_Downsampled.bmp');
 
-og_image = imread('C:\Users\Arya\Desktop\CV_code\Images\1\Elaine.bmp');
+og_image = imread('..\Images\1\Elaine.bmp');
 
 interpolation_methods = {'nearest', 'bilinear', 'bicubic', 'box'};
 
