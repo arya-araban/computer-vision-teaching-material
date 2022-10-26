@@ -5,6 +5,8 @@ clear;
 
 im1 = imread('..\Images\2\hm_main.jpg');
 im2 = imread('..\Images\2\hm_ref.jpg');
+%im1 = imread('..\Images\2\box1.png');
+%im2 = imread('..\Images\2\box2.png');
 out = uint8(zeros(size(im1)));
 for i = 1:3
     M = zeros(256,1,'uint8'); %// Store mapping - Cast to uint8 to respect data type
