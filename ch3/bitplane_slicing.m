@@ -1,5 +1,6 @@
 clear;
 img = imread('..\Images\2\Cameraman.bmp');
+
 img7 = img; img6 = img; img5 = img; img4 = img;
 img3 = img; img2 = img; img1 = img; img0 = img;
 

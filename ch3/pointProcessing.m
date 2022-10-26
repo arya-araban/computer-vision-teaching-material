@@ -22,7 +22,7 @@ function b = pointProcessing(ops)
  
     end 
     
-    a = uint8(a); b = uint8(b);
+   
     subplot(2,2,1); imshow(a); title 'Original Image'
     subplot(2,2,2); histogram(a, unique(a)); 
     

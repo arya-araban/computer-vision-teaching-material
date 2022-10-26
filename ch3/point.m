@@ -1,4 +1,4 @@
 clear;
 
-pointProcessing({'invert'});
+pointProcessing({'rcontrast'});
 
