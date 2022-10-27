@@ -16,7 +16,7 @@ x = 0:255;
 y1 = 10*ones(size(x)); 
 
 y1(128:240) = 200;
-
+a = find(main_img>=128 & main_img<=240);
 img1(find(main_img>=128 & main_img<=240)) = 200;
 
 img1(find(main_img<128)) = 10;
