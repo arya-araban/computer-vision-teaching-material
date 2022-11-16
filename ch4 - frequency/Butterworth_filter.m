@@ -10,7 +10,7 @@ D = sqrt(x.^2+y.^2);
 
 
 n = 2; %the higher n is the closet it gets to ideal
-D0 = 30; 
+D0 = 50; 
 
 h = 1./(1 + (D./D0).^(2*n)); %the filter 
 
