@@ -18,10 +18,10 @@ out1 = mag_ones .* exp(j*pha);
 out2 = mag .* exp(j*phase_zeros);
 
 % Find the inverse images
-out1 = real(ifft2(out1)); %WHY REAL?
+out1 = real(ifft2(out1)); 
 out2 = real(ifft2(out2));
 % Show the images
 figure; 
 subplot(2,2,1); imshow(og_image); title('original image');
-subplot(2,2,2); imshow(out1,[]); title('magnitude removed');
-subplot(2,2,3); imshow(uint8(out2),[]); title('phase removed');
+subplot(2,2,2); imshow(out1,[]); title('magnitude removed, same phase');
+subplot(2,2,3); imshow(uint8(out2),[]); title('phase removed, same magnitude');

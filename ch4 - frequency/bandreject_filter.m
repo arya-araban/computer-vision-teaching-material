@@ -13,7 +13,7 @@ r2 = 17;
 h = z>r1 & z<r2 ; %the filter 
 
 
-% UNCOMMENT FOLLOWING LINE FOR HIGH PASS INSTEAD OF LOW PASS
+% UNCOMMENT FOLLOWING LINE FOR BAND REJECT INSTEAD OF BAND PASS
 h = 1 - h; 
 
 %fourier operations

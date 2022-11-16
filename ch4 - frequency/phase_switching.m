@@ -22,11 +22,12 @@ out1 = mag1 .* exp(j*pha2);
 out2 = mag2 .* exp(j*pha1);
 
 % Find the inverse images
-out1 = real(ifft2(out1));
-out2 = real(ifft2(out2));
+out1 = ifft2(out1);
+out2 = ifft2(out2);
 
 % Show the images
 figure;
-imshow(uint8(out1), []); title('magnitude of first, phase of second');
-figure;
-imshow(uint8(out2), []); title('magnitude of second, phase of first');
+subplot(2,2,1);imshow(uint8(Image1));title('First Image')
+subplot(2,2,2);imshow(uint8(out1), []); title('magnitude of first, phase of second');
+subplot(2,2,3);imshow(uint8(Image2));title('Second Image')
+subplot(2,2,4);imshow(uint8(out2), []); title('magnitude of second, phase of first');

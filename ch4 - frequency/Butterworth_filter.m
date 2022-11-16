@@ -15,7 +15,7 @@ D0 = 50;
 h = 1./(1 + (D./D0).^(2*n)); %the filter 
 
 % UNCOMMENT FOLLOWING LINE FOR HIGH PASS INSTEAD OF LOW PASS
-%h = 1 - h; 
+h = 1 - h; 
 
 %fourier operations
 im_fft=fftshift(fft2(im));

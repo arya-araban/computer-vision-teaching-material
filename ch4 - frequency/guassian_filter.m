@@ -9,7 +9,7 @@ im = rgb2gray(imread('..\Images\4\Lena.bmp'));
 D = sqrt(x.^2+y.^2);
 
 
-D0 = 30; 
+D0 = 20; 
 
 h = exp(-D.^2/(2*(D0.^2))); %the filter 
 
