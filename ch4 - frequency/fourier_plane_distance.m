@@ -2,7 +2,7 @@ clear;
 
 x = 127;y=127;
 im = zeros(x,y);
-distance = 10;
+distance = 1;
 im(ceil(x/2)+distance,ceil(y/2)-distance) = 255;
 im(ceil(x/2)-distance,ceil(y/2)+distance) = 255;
 
