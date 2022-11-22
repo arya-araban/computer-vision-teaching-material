@@ -3,16 +3,16 @@ clear;
 x = 127;y=127;
 im1 = zeros(x,y);
 distance = 10;
-im1(ceil(x/2)+distance,ceil(y/2)+distance) = 255;
-im1(ceil(x/2)-distance,ceil(y/2)-distance) = 255;
+im1(ceil(y/2)+distance,ceil(x/2)+distance) = 255;
+im1(ceil(y/2)-distance,ceil(x/2)-distance) = 255;
 
 out1 = ifftshift(im1);
 out1 = real(ifft2(out1));
 %IMAGE2
 im2 = zeros(x,y);
 distance = 2;
-im2(ceil(x/2),ceil(y/2)-distance) = 255;
-im2(ceil(x/2),ceil(y/2)+distance) = 255;
+im2(ceil(y/2),ceil(x/2)-distance) = 255;
+im2(ceil(y/2),ceil(x/2)+distance) = 255;
 
 out2 = ifftshift(im2);
 out2 = real(ifft2(out2));

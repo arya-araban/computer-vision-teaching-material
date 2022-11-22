@@ -1,4 +1,4 @@
-%% Covolution theorem verification 
+% Covolution theorem verification 
 
 clear;
 

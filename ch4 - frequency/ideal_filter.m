@@ -7,7 +7,7 @@ im = rgb2gray(imread('..\Images\4\Lena.bmp'));
 % this circle is the same size as image and the center is 0 
 [x,y] = meshgrid(-(m/2):(m/2)-1, -(n/2):(n/2)-1);
 z = sqrt(x.^2+y.^2);
-r=20; %radius
+r=50; %radius
 h = z<r; %the filter 
 
 % UNCOMMENT FOLLOWING LINE FOR HIGH PASS INSTEAD OF LOW PASS
@@ -23,5 +23,6 @@ out = im_fft .* h;
 subplot(2,2,3); imshow(log(abs(out)),[]);title('fft*h')
 
 out = uint8(ifft2(ifftshift(out)));
-subplot(2,2,4); imshow(uint8(out));title('result')
 
+
+subplot(2,2,4); imshow(uint8(out));title('result');
