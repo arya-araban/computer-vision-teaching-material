@@ -24,16 +24,6 @@ clearvars -except pyr img level map
 
 % LAPLACIAN PYRAMID RECONSTRUCION POSSIBLE -- HOMEWORK
 
-con_img = pixel_replication(pyr{level});
-cur_img = con_img;
-for i = (level-1):-1:2 
-    con_img = cur_img +pyr{i};
-    cur_img = pixel_replication(con_img);
-end
-con_img = cur_img + pyr{1};
-figure;
-imshow(con_img);
-
 
 
 
