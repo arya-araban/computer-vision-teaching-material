@@ -3,14 +3,17 @@ img = rgb2gray(imread('..\Images\6\Lena.bmp'));
 level = 5;
 pyr = cell(1,level);
 % LAPLACIAN PYRAMID CREATION
-old_img = img;
-md_img = img;
+cur_img = img;
 for i=1:level-1
-    md_img = impyramid(md_img,'reduce');
+    md_img = impyramid(cur_img,'reduce');
     upscaled = pixel_replication(md_img);
-    lp = old_img - upscaled;
-    old_img=md_img;
+    
+    lp = cur_img - upscaled;
+    
     pyr{i} = lp;
+    
+    cur_img=md_img;
+   
     
     figure;
     imshow(lp);
@@ -20,9 +23,15 @@ figure;
 imshow(pyr{level});
 
 
-clearvars -except pyr img level map
 
-% LAPLACIAN PYRAMID RECONSTRUCION POSSIBLE -- HOMEWORK
+% LAPLACIAN PYRAMID RECONSTRUCION
+
+cur_img = pyr{level};
+for i = (level-1):-1:1
+    cur_img = pixel_replication(cur_img) + pyr{i};
+end
+figure;
+imshow(cur_img);
 
 
 
