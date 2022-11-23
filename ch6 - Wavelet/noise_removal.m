@@ -1,9 +1,9 @@
 clear;
-img = rgb2gray(imread('C:\Users\Arya\Desktop\computer vision\HW\Images\6\Lena.bmp'));
+img = rgb2gray(imread('..\Images\6\Lena.bmp'));
 
 nLevel = 3;  % Number of decompositions
-th = 's'; %th = 'h'; %HARD OR SOFT THRESHOLD
-thresh_val = 0.6745;
+th = 'h'; %th = 'h'; %HARD OR SOFT THRESHOLD
+thresh_val = 0.6745; %
 
 map = gray; %grayscale colormap
 nColors = size(map, 1);  % Number of colors in colormap
@@ -14,12 +14,13 @@ cD = cell(1, nLevel);    % Diagonal detail coefficients
 
 noisy_image = imnoise(img,'gaussian',0,0.035);
 startImage = noisy_image;
-figure;imshow(noisy_image); imwrite(noisy_image, "5_noisyLena.jpg");
+figure;imshow(noisy_image); 
 %CONSTRUCT
 for iLevel = 1:nLevel,
   [cA{iLevel}, cH{iLevel}, cV{iLevel}, cD{iLevel}] = dwt2(startImage, 'haar');
   
   %APPLYING THRESHOLD TO ALL,EXCEPT THE LL
+  
   cH{iLevel} = wthresh(cH{iLevel},th,(median(abs(cH{iLevel}(:)))/thresh_val));
   cV{iLevel} = wthresh(cV{iLevel},th,(median(abs(cV{iLevel}(:)))/thresh_val));
   cD{iLevel} = wthresh(cD{iLevel},th,(median(abs(cD{iLevel}(:)))/thresh_val));
@@ -33,6 +34,7 @@ for iLevel = nLevel:-1:1,
 end
 fullRecon = uint8(fullRecon);
 
-figure;imshow(fullRecon); imwrite(fullRecon, "5_Lena_HT_Reconstucted.jpg");
+figure;imshow(fullRecon);
 
-disp("MSE=" + immse(img,fullRecon) + " --- " + "PSNR=" + psnr(img,fullRecon));
+disp("MSE BETWEEN NOISY AND ORIGINAL = " + immse(img,noisy_image))
+disp("MSE BETWEEN RECONSTRUCTED AND ORIGINAL = " + immse(img,fullRecon))

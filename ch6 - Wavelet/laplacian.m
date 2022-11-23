@@ -24,14 +24,11 @@ imshow(pyr{level});
 
 
 
-% LAPLACIAN PYRAMID RECONSTRUCION
+% LAPLACIAN PYRAMID RECONSTRUCION - HOMEWORK :)
 
-cur_img = pyr{level};
-for i = (level-1):-1:1
-    cur_img = pixel_replication(cur_img) + pyr{i};
-end
-figure;
-imshow(cur_img);
+
+
+
 
 
 
