@@ -39,4 +39,4 @@ end
 fullRecon = uint8(fullRecon);
 
 figure;imshow(fullRecon);
-disp("MSE=" + immse(img,fullRecon) + " --- " + "PSNR=" + psnr(img,fullRecon));
+disp("MSE=" + immse(img,fullRecon));

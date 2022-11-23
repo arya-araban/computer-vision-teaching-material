@@ -2,7 +2,7 @@ clear;
 img = rgb2gray(imread('..\Images\6\Lena.bmp'));
 
 nLevel = 3;  % Number of decompositions
-th = 'h'; %th = 'h'; %HARD OR SOFT THRESHOLD
+th = 's'; %th = 'h'; %HARD OR SOFT THRESHOLD
 thresh_val = 0.6745; %
 
 map = gray; %grayscale colormap
