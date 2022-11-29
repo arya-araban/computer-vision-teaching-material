@@ -1,4 +1,5 @@
 clear;
+
 img = rgb2gray(imread('..\Images\6\Lena.bmp'));
 
 nLevel = 3;  % Number of decompositions

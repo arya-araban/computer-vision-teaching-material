@@ -10,8 +10,8 @@ clear
 % % -=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-
 
 
-img = im2double((imread("..\Images\6\template_match\p2.jpg")));
-template = im2double((imread('..\Images\6\template_match\t2.jpg')));
+img = im2double(rgb2gray(imread("..\Images\6\template_match\WaldoBeach.jpg")));
+template = im2double(rgb2gray(imread("..\Images\6\template_match\Waldo.jpg")));
 
 figure, imshow(img); title("Original Image")
 
@@ -27,6 +27,7 @@ I1(1 + shift_v:(size(img, 1) + shift_v), 1 + shift_u:(size(img, 2) + shift_u) ) 
 
 % 0.5 is the best theshold for both einstein1 and einstein2
 threshold = 0.5;
+
 tic
 for u = (1 + shift_u) : (size(I1, 2) - shift_u) % width
     for v = (1 + shift_v) : (size(I1, 1) - shift_v) % height
@@ -56,6 +57,7 @@ for u = (1 + shift_u) : (size(I1, 2) - shift_u) % width
     end
 end
 toc
+
 figure, imshow(out); title("output PREmatch")
 match = (out > threshold);
 figure, imshow(match); title("output POSTmatch")

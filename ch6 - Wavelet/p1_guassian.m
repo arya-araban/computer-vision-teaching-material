@@ -1,3 +1,4 @@
+
 img = rgb2gray(imread('..\Images\6\Lena.bmp'));
 level = 5;
 B = img;
