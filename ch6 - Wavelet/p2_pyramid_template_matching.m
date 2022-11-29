@@ -3,8 +3,7 @@
 % using 2 image pyramids. A Gaussian Blur kernel is applied
 % after subsampling the search image and template.
 
-% Revision History 10/13/2015
-% SRD - Initial Copy. Algorithm uses only 2 Image pyramids. 
+% SRD - Algorithm uses only 2 Image pyramids. 
 %       To do: Further modularize this script. Either allow the user
 %       specify how many image pyramids to use or make a 'smart' version
 %       of the tool to determine based upon the search image size how
