@@ -1,4 +1,4 @@
-function output = pixel_replication(img)
+function output = p1_pixel_replication(img)
 [X,Y] = size(img);
 %make sure output is 2* the size of the input
 output = zeros(2*X,2*Y);

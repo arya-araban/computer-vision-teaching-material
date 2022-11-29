@@ -9,11 +9,9 @@ clear
 % % einstein2.jpg
 % % -=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-
 
-% imagename = "einstein1.jpg";
-imagename = "..\Images\6\einstein1.jpg";
 
-img = im2double(imread(imagename));
-template = im2double(imread('..\Images\6\template.jpg'));
+img = im2double((imread("..\Images\6\template_match\p2.jpg")));
+template = im2double((imread('..\Images\6\template_match\t2.jpg')));
 
 figure, imshow(img); title("Original Image")
 
@@ -25,13 +23,13 @@ out = img; % declare output
 I1 = zeros(size(img, 1) + shift_v * 2, size(img, 2) + shift_u * 2);
 
 % place the original image inside I1 
-I1(1 + shift_v:size(img, 1) + shift_v, 1 + shift_u:size(img, 2) + shift_u) = img;
+I1(1 + shift_v:(size(img, 1) + shift_v), 1 + shift_u:(size(img, 2) + shift_u) ) = img;
 
 % 0.5 is the best theshold for both einstein1 and einstein2
 threshold = 0.5;
-
-for u = 1 + shift_u : size(I1, 2) - shift_u % width
-    for v = 1 + shift_v : size(I1, 1) - shift_v % height
+tic
+for u = (1 + shift_u) : (size(I1, 2) - shift_u) % width
+    for v = (1 + shift_v) : (size(I1, 1) - shift_v) % height
         
         x1 = u - shift_u; x2 = u - 1;
         y1 = v - shift_v; y2 = v - 1;
@@ -57,7 +55,7 @@ for u = 1 + shift_u : size(I1, 2) - shift_u % width
         out(v-shift_v, u-shift_u) = value;
     end
 end
-
+toc
 figure, imshow(out); title("output PREmatch")
 match = (out > threshold);
 figure, imshow(match); title("output POSTmatch")
