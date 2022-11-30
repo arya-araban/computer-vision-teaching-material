@@ -11,9 +11,10 @@ clear
 
 og_img = imread("..\Images\6\template_match\WaldoBeach.jpg");
 img = im2double(rgb2gray(og_img));
+figure, imshow(og_img); title("Original Image")
+
 template = im2double(rgb2gray(imread("..\Images\6\template_match\Waldo.jpg")));
 
-figure, imshow(og_img); title("Original Image")
 
 out = img; % declare output
 
