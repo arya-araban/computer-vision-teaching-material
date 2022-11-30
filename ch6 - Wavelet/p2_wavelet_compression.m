@@ -18,6 +18,6 @@ for keep = [.1 .05 .01 .005]
     
     Arecon = uint8(waverec2(Cfilt,S,'haar'));
     
-    imshow(uint8(Arecon));
+    imshow(uint8(Arecon)); title (['keeping ' num2str(keep*100) '% of highest coeffs'])
     counter = counter + 1;
 end

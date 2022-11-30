@@ -24,8 +24,8 @@ figure;
 I = imread("..\Images\6\template_match\WaldoBeach.jpg");
 temp = imread("..\Images\6\template_match\Waldo.jpg");
 
-subplot(1,2,1);imshow(I);
-subplot(1,2,2);imshow(temp);
+subplot(1,2,1);imshow(I); title("image");
+subplot(1,2,2);imshow(temp); title("template");
 % get grayscale values
 
 g=rgb2gray(I);
@@ -112,8 +112,8 @@ tic
 
 [dimx, dimy] = size(gprimetB2);
 
-% Low threshold
-low = 1e10;
+% threshold
+low = 100;
 
 % Search Space < this should be the image pyramid space >
 
