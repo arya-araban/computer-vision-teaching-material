@@ -9,11 +9,11 @@ clear
 % % einstein2.jpg
 % % -=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-
 
-
-img = im2double(rgb2gray(imread("..\Images\6\template_match\WaldoBeach.jpg")));
+og_img = imread("..\Images\6\template_match\WaldoBeach.jpg");
+img = im2double(rgb2gray(og_img));
 template = im2double(rgb2gray(imread("..\Images\6\template_match\Waldo.jpg")));
 
-figure, imshow(img); title("Original Image")
+figure, imshow(og_img); title("Original Image")
 
 out = img; % declare output
 
@@ -25,7 +25,7 @@ I1 = zeros(size(img, 1) + shift_v * 2, size(img, 2) + shift_u * 2);
 % place the original image inside I1 
 I1(1 + shift_v:(size(img, 1) + shift_v), 1 + shift_u:(size(img, 2) + shift_u) ) = img;
 
-% 0.5 is the best theshold for both einstein1 and einstein2
+% 0.5 is the best theshold 
 threshold = 0.5;
 
 tic
@@ -61,3 +61,9 @@ toc
 figure, imshow(out); title("output PREmatch")
 match = (out > threshold);
 figure, imshow(match); title("output POSTmatch")
+
+measures =  regionprops(match, 'Centroid', 'Area');
+centroid = measures.Centroid;
+
+figure, imshow(og_img); hold on;
+rectangle('Position', [centroid(1)-shift_v centroid(2)-shift_u shift_v shift_u], 'LineWidth', 2);
