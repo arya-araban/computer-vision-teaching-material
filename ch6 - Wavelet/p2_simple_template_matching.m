@@ -3,11 +3,11 @@ close
 % continue by clearing everything to ensure clean runs
 clear 
 
-% % -=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 % % Implement template_matching_normcorr.m, and try to
 % % find the best threshold value for einstein1.jpg and
 % % einstein2.jpg
-% % -=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-=x=-
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 
 og_img = imread("..\Images\6\template_match\WaldoBeach.jpg");
 img = im2double(rgb2gray(og_img));

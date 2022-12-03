@@ -1,3 +1,9 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Function which performs pixel-wise operations on a image.
+% % INPUT: ops -- Array specifying the operations to perform on image
+% % OUTPUT: b -- Image after applying the pixel-wise operations
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 function b = pointProcessing(ops)
     a = imread('..\Images\1\Barbara.bmp');
     b = a;

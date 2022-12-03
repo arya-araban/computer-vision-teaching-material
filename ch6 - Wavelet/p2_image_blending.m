@@ -1,9 +1,7 @@
-clear all; 
-close all;
-clc;
+clear all; close all; clc;
 
-leftImage = double(imread("..\Images\6\blending\cat.jpg"));
-rightImage = double(imread("..\Images\6\blending\dog.jpg"));
+leftImage = double(imread("..\Images\6\blending\dog.jpg"));
+rightImage = double(imread("..\Images\6\blending\cat.jpg"));
 
 iternum = 7;
 

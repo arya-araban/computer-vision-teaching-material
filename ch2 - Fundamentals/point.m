@@ -1,3 +1,8 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Utilizing the PointProcessing function
+% % Operations include: 'lighten', 'darken', 'invert', 'rcontrast', 'lcontrast'
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear;
 
-pointProcessing({'lighten'});
+pointProcessing({'invert','lighten'});

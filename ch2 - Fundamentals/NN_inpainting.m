@@ -1,4 +1,8 @@
-% nearest neighbour inpainting 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Implementation of Nearest Neighbour inpainting (interpolation) 
+% % AKA Pixel Replication
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear; 
 
 og_image = imread('..\Images\1\Elaine.bmp');

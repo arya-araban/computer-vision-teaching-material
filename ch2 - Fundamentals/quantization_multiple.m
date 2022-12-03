@@ -1,3 +1,8 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Showing how considering 'n' bits of each pixel in an image and then perform
+% % quantiziation will effect the quality of the image
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear
 
 in = imread('..\Images\1\Barbara.bmp');

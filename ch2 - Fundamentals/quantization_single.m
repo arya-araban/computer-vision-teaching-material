@@ -1,3 +1,8 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Performing image quantization with 'L' levels (Keep L between 1 and 256) 
+% % ie. if L=2 then you'll have a binary image. 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear
 
 in = imread('..\Images\1\Barbara.bmp');

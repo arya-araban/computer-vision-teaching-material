@@ -1,3 +1,8 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % showing simple operations between multiple images 
+% % including addition and subtraction.
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear;
 im1 = imread('..\Images\1\Goldhill.bmp');
 im2 = imread('..\Images\1\Elaine.bmp');

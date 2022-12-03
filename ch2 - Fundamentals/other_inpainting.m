@@ -1,4 +1,8 @@
-% nearest neighbour inpainting 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Showcasing different types of interpolation
+% % Including NN, Bilinear, Bicubic, and Box interpolation.
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear; 
 
 in= imread('..\Images\1\Elaine_Downsampled.bmp');

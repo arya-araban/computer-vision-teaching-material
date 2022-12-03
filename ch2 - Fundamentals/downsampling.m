@@ -1,5 +1,8 @@
-clear; 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % downsampling an image by skipping rows and cols
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 
+clear; 
 
 img = imread('..\Images\1\Elaine.bmp');
 
