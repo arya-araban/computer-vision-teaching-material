@@ -16,9 +16,7 @@ red   = image(:,:,1);
 green = image(:,:,2);
 blue  = image(:,:,3);
 
-%W = 0.2549;
-
-radius = 0.335;
+radius = 0.315;
 
 sample_color = [0.6863, 0.1608, 0.1922];
 
