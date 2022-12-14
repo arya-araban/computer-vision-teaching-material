@@ -11,7 +11,7 @@ for k = 1 : length(hexMap)
 	b = hex2dec(thisCell(5:6));
 	myColorMap(k, :) = [r, g, b];
 end
-myColorMap = myColorMap / 255; % Normalize to range 0-1
+% Normalize to range 0-1
 figure; imshow('moon.tif');
-colormap(myColorMap);
+colormap(myColorMap / 255);
 colorbar;
