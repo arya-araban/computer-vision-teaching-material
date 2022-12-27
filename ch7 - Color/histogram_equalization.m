@@ -1,7 +1,7 @@
-clc,close all,clear all
+clc, close all, clear all;
 
-image = imread('..\Images\5\overexposed.jpg');
-%image = imread('..\Images\5\Girl.bmp');
+%image = imread('..\Images\5\overexposed.jpg');
+image = imread('..\Images\5\Girl.bmp');
 subplot(2,2,1);
 imshow(image);
 
