@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%% Image Stitching Using Feature Extraction and Corner Detection and Correlation Technique 
 clc; clear all; close all;
-im1=imread('..\Images\7\panaroma\c1.jpg');
-im2=imread('..\Images\7\panaroma\c2.jpg');
+im1=imread('..\Images\7\panaroma\a1.jpg');
+im2=imread('..\Images\7\panaroma\a2.jpg');
 
 methd = 'SURF';
 
@@ -58,19 +58,19 @@ Min_INLPTS_2= min(RND_Inlier_Pts_2);
 %%%% Assigning the minimum index of row and coloumn for the said images inlier points%%%%%%%
 %%%% Reversing the order of matrix obtained during Outlier elimmination %%%%%%%%%%%%
 %%%% As it locates the pixel values of images as column into row pattern when we used outlier elimination paptern%%%%  
-RI_TIG_1 = Min_INLPTS_1(1,2);
-CI_TIG_1 = Min_INLPTS_1(1,1);
+min_y1 = Min_INLPTS_1(1,2);
+min_x1 = Min_INLPTS_1(1,1);
 
-RI_TIG_2 = Min_INLPTS_2(1,2);
-CI_TIG_2 = Min_INLPTS_2(1,1);
-   
+min_y2 = Min_INLPTS_2(1,2);
+min_x2 = Min_INLPTS_2(1,1);
+  
   %%%%%% Assigning test images for the final concatenation of images %%%%%%
-FinalImage1 = im1(:,1:CI_TIG_1,:);
+FinalImage1 = im1(:,1:min_x1,:);
 
-if (RI_TIG_1 > RI_TIG_2)
-    FinalImage2 =im1((RI_TIG_1-RI_TIG_2):row_im2,CI_TIG_2:col_im2 , :);
+if (min_y1 > min_y2)
+    FinalImage2 =im1((min_y1-min_y2):row_im2,min_x2:col_im2 , :);
 else 
-    FinalImage2 =im2((RI_TIG_2-RI_TIG_1):row_im2,CI_TIG_2:col_im2 , :);
+    FinalImage2 =im2((min_y2-min_y1):row_im2,min_x2:col_im2 , :);
 end
    
 %   %%%%%%%%%% Equalizing the rows of Images%%%%%%%%

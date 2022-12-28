@@ -14,8 +14,8 @@ points2 = feval(['detect', methd ,'Features'],I2_gray);
 % Note that there's a SIFT implementation in Matlab 2022b 
 
 % Extract the neighborhood features.
-[features1,valid_points1] = extractFeatures(I1_gray,points1, method=methd);
-[features2,valid_points2] = extractFeatures(I2_gray,points2, method=methd);
+[features1,valid_points1] = extractFeatures(I1_gray ,points1, method=methd);
+[features2,valid_points2] = extractFeatures(I2_gray, points2, method=methd);
 
 % Match the features.
 indexPairs = matchFeatures(features1,features2);
