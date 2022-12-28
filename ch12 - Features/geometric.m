@@ -1,6 +1,7 @@
 close all;clear; clc;
 
 whichIm = 4; %select the image
+methd = 'SURF';
 
 im = rgb2gray(imread(['..\Images\7\Attack 1\',num2str(whichIm),'.bmp']));
 
@@ -9,14 +10,14 @@ reference_img = rgb2gray(imread('..\Images\7\reference.bmp'));
 
 %Detect the feature points using the selected algorithm.
 % SURF / BRISK / FAST / Harris
-pointsA = detectSURFFeatures(im); 
-pointsB = detectSURFFeatures(reference_img);
+pointsA = feval(['detect', methd,'Features'],im);
+pointsB = feval(['detect', methd,'Features'],reference_img);
 
 
 
 % extract features finds descriptor using SURF algorithm 
-[featuresA, pointsA] = extractFeatures(im, pointsA);
-[featuresB, pointsB] = extractFeatures(reference_img, pointsB);
+[featuresA, pointsA] = extractFeatures(im, pointsA, method=methd);
+[featuresB, pointsB] = extractFeatures(reference_img, pointsB, method=methd);
 
 %%
 % indexPairs = matchFeatures(featuresA, featuresB, 'MaxRatio',0.9);
@@ -45,5 +46,3 @@ plot(x,y,'ys'),hold off;
 figure,imshow(reference_img),hold on,x = B(:,1);y = B(:,2);plot(x,y,'ys');
 
 figure,imshow(converted_img),hold on;x = B(:,1);y = B(:,2);plot(x,y,'ys');
-
-imwrite(converted_img ,'7_result_4.jpg');
