@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%% Image Stitching Using Feature Extraction and Corner Detection and Correlation Technique 
 clc; clear all; close all;
-im1=imread('..\Images\7\panaroma\a1.jpg');
-im2=imread('..\Images\7\panaroma\a2.jpg');
+im1=imread('..\Images\7\panaroma\c1.jpg');
+im2=imread('..\Images\7\panaroma\c2.jpg');
 
-methd = 'SURF';
+methd = 'BRISK';
 
 %%%%%%%%%%%Gray Scale Conversion for image registeration as described in paper
 im1_gray = im2double(rgb2gray(im1));

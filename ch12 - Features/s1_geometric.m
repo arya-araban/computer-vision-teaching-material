@@ -1,7 +1,7 @@
 close all;clear; clc;
 
 whichIm = 4; %select the image
-methd = 'SURF';
+methd = 'BRISK';
 
 im = rgb2gray(imread(['..\Images\7\Attack 1\',num2str(whichIm),'.bmp']));
 
