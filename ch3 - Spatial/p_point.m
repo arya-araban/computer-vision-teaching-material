@@ -1,4 +1,0 @@
-clear;
-
-pointProcessing({'lcontrast'});
-
