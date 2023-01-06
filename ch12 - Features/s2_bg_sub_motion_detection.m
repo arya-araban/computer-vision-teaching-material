@@ -27,7 +27,7 @@ for i = (1:totalNumFrames)
     curFrame_gray = rgb2gray(curFrame);
     diff_img = curFrame_gray - refFrame; % this is your 'c' matrix/variable
     binarisedMask =  im2uint8(imbinarize(diff_img, thresholdParam));
-    %motion detection is captured by this matrix
+    % motion detection is captured by this matrix
     
     imgt = horzcat(curFrame, repmat(binarisedMask,[1 1 3]));
     writeVideo(writerObj, imgt);

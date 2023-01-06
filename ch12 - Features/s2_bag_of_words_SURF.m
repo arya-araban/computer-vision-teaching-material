@@ -42,9 +42,9 @@ opts = templateSVM('KernelFunction', 'rbf');
 classifier = trainImageCategoryClassifier(trainingSets, bag, 'LearnerOptions', opts);
     
 %% Evaluate the classifier on training then validation data
-disp('---EVALUATING BETWEEN CLASSIFIED AND TRAINING SET---');
+disp('---EVALUATING CLASSIFIER ON TRAINING SET---');
 confMatrix_train = evaluate(classifier, trainingSets);
-disp('---EVALUATING BETWEEN CLASSIFIED AND VALIDATION SET---');
+disp('---EVALUATING CLASSIFIER ON VALIDATION SET---');
 confMatrix_val = evaluate(classifier, validationSets);
 
 tran_val_avg_accuracy = (mean(diag(confMatrix_val)) + mean(diag(confMatrix_train))) / 2; % This information should be used to tweak the system parameters for better accuracy
@@ -52,7 +52,7 @@ display(['The training and validation average accuracy is ' num2str(tran_val_avg
 
 %% Deployment (test the system on newly unseen images)
 testSet = imageSet('BoW/Test_Data', 'recursive');
-disp('---EVALUATING BETWEEN CLASSIFIED AND TEST SET---');
+disp('---EVALUATING CLASSIFIER ON TEST SET---');
 confMatrix_test = evaluate(classifier, testSet);
 test_accuracy = mean(diag(confMatrix_test));
 display(['The test accuracy is ' num2str(test_accuracy) '.']);
