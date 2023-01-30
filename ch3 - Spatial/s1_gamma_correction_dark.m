@@ -1,4 +1,8 @@
-%Matlab Code
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Performing gammma correction on a dark image 
+% % note that this means the variance in lower grayscale levels will increase 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear;
 img = imread('..\Images\2\HE2.jpg');
 

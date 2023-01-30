@@ -1,4 +1,10 @@
-function b = pointProcessing(ops)
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Function to perform various point operations on an image.
+% % note that input should be an array containing one or more of: 
+% % 'invert', 'darken', 'lighten', 'locntrast', 'rcontast'
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
+function pointProcessing(ops)
     a = imread('..\Images\1\Barbara.bmp');
     b = a;
     

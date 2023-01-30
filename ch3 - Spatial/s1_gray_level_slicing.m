@@ -1,3 +1,6 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Performing binary & linear grayscale level slicing on an image
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 clear;
 
 main_img = imread('..\Images\2\HE1.jpg');

@@ -1,7 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Image Classification using Bag of Visual Words                      %
-%                                                                         %                              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Image Classification using Bag of Visual Words
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 
 %% Clear Variables, Close Current Figures, and Create Results Directory 
 clc; clear all; close all;

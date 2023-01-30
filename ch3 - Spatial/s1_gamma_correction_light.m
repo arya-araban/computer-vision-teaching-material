@@ -1,3 +1,8 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % Performing gammma correction on a light image 
+% % note that this means the variance in higher grayscale levels will increase 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+
 clear;
 img = imread('..\Images\2\HE4.jpg');
 

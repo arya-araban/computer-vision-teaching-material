@@ -1,3 +1,7 @@
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
+% % visualizing the impact of removing certain bits for each pixel 
+% % in grayscale image. 
+% % ~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==~==
 clear;
 img = imread('..\Images\2\Cameraman.bmp');
 
