@@ -1,5 +1,5 @@
 # computer-vision-TA
-Teaching assistant : Masters course of Computer Vision at FUM (Fall 2022 - Winter 2023) 
+Teaching assistant : Masters course of Introduction to Computer Vision at FUM (Fall 2022 - Winter 2023) 
 
 The code that I've written in order to visualize practical examples of the course content to students on a weekly basis. 
 
